@@ -3,20 +3,23 @@ const paper = "Paper";
 const scissors = "Scissors";
 const choices = [rock, paper, scissors];
 let random = Math.floor(Math.random() * choices.length);
-let playerSelection = prompt("Rock, Paper, Scissors?")
+let playerSelection = prompt("Rock, Paper, Scissors?");
 let computerSelection = computerPlay();
 function computerPlay() {
     console.log(random, choices[random]);
     }
     
-function playRound() {   
+function playRound() {
+    function computerPlay() {
+    console.log(random, choices[random]);
+    } 
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
         alert("Rock beats scissors! You win!")
     }
     else if (playerSelection == "Rock" && computerSelection == "Paper") {
         alert("Paper beats rock! You lose!")
     }
-    else if (playerSeletion == "Rock" && computerSelection == "Rock") {
+    else if (playerSelection == "Rock" && computerSelection == "Rock") {
         alert("Tie! Try again!")
     }
     else if (playerSelection == "Paper" && computerSelection == "Rock") {
@@ -41,5 +44,4 @@ function playRound() {
         alert("Try again!")
     }
 }
-
 playRound();
