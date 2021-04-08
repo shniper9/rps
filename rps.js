@@ -7,12 +7,9 @@ let playerSelection = prompt("Rock, Paper, Scissors?");
 let computerSelection = computerPlay();
 function computerPlay() {
     console.log(random, choices[random]);
-    }
-    
+    }  
 function playRound() {
-    function computerPlay() {
-    console.log(random, choices[random]);
-    } 
+    computerPlay();
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
         alert("Rock beats scissors! You win!")
     }
