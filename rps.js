@@ -8,33 +8,32 @@ let computerSelection = computerPlay();
 function computerPlay() {
     console.log(random, choices[random]);
     }  
-function playRound() {
-    computerPlay();
-    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+function playRound(computerSelection, playerSelection) {
+    if (playerSelection === "Rock" && computerSelection === "Scissors") {
         alert("Rock beats scissors! You win!")
     }
-    else if (playerSelection == "Rock" && computerSelection == "Paper") {
+    else if (playerSelection === "Rock" && computerSelection === "Paper") {
         alert("Paper beats rock! You lose!")
     }
-    else if (playerSelection == "Rock" && computerSelection == "Rock") {
+    else if (playerSelection === "Rock" && computerSelection === "Rock") {
         alert("Tie! Try again!")
     }
-    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+    else if (playerSelection === "Paper" && computerSelection === "Rock") {
         alert("Paper beats rock! You win!")
     }
-    else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+    else if (playerSelection === "Paper" && computerSelection === "Scissors") {
         alert("Scissors beats paper! You lose!")
     }
-    else if (playerSelection == "Paper" && computerSelection == "Paper") {
+    else if (playerSelection === "Paper" && computerSelection === "Paper") {
         alert("Tie! Try again!")
     }
-    else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         alert("Rock beats scissors! You lose!")
     }
-    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+    else if (playerSelection === "Scissors" && computerSelection === "Paper") {
         alert("Scissors beats paper! You win!")
     }
-    else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+    else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
         alert("Tie! Try again!")
     }
     else {
@@ -42,3 +41,4 @@ function playRound() {
     }
 }
 playRound();
+
