@@ -3,42 +3,42 @@ const paper = "Paper";
 const scissors = "Scissors";
 const choices = [rock, paper, scissors];
 let random = Math.floor(Math.random() * choices.length);
-let playerSelection = prompt("Rock, Paper, Scissors?");
+let playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase();
 let computerSelection = computerPlay();
 function computerPlay() {
-    console.log(random, choices[random]);
+    return(random, choices[random]);
     }  
-function playRound(computerSelection, playerSelection) {
-    if (playerSelection === "Rock" && computerSelection === "Scissors") {
+function playRound(playerSelection, computerSelection) {  
+    if (playerSelection === "rock" && computerSelection === "Scissors") {
         alert("Rock beats scissors! You win!")
     }
-    else if (playerSelection === "Rock" && computerSelection === "Paper") {
+    else if (playerSelection === "rock" && computerSelection === "Paper") {
         alert("Paper beats rock! You lose!")
     }
-    else if (playerSelection === "Rock" && computerSelection === "Rock") {
+    else if (playerSelection === "rock" && computerSelection === "Rock") {
         alert("Tie! Try again!")
     }
-    else if (playerSelection === "Paper" && computerSelection === "Rock") {
+    else if (playerSelection === "paper" && computerSelection === "Rock") {
         alert("Paper beats rock! You win!")
     }
-    else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+    else if (playerSelection === "paper" && computerSelection === "Scissors") {
         alert("Scissors beats paper! You lose!")
     }
-    else if (playerSelection === "Paper" && computerSelection === "Paper") {
+    else if (playerSelection === "paper" && computerSelection === "Paper") {
         alert("Tie! Try again!")
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+    else if (playerSelection === "scissors" && computerSelection === "Rock") {
         alert("Rock beats scissors! You lose!")
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+    else if (playerSelection === "scissors" && computerSelection === "Paper") {
         alert("Scissors beats paper! You win!")
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+    else if (playerSelection === "scissors" && computerSelection === "Scissors") {
         alert("Tie! Try again!")
     }
     else {
-        alert("Try again!")
+        alert("Oops! Someting went wrong! Try again!")
     }
 }
-playRound();
+playRound(playerSelection, computerSelection);
 
