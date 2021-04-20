@@ -1,3 +1,4 @@
+function playRound() { 
 const rock = "Rock";
 const paper = "Paper";
 const scissors = "Scissors";
@@ -5,10 +6,9 @@ const choices = [rock, paper, scissors];
 let random = Math.floor(Math.random() * choices.length);
 let playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase();
 let computerSelection = computerPlay();
-function computerPlay() {
+    function computerPlay() {
     return(random, choices[random]);
-    }  
-function playRound(playerSelection, computerSelection) {  
+    }   
     if (playerSelection === "rock" && computerSelection === "Scissors") {
         alert("Rock beats scissors! You win!")
     }
@@ -40,5 +40,11 @@ function playRound(playerSelection, computerSelection) {
         alert("Oops! Someting went wrong! Try again!")
     }
 }
-playRound(playerSelection, computerSelection);
-
+function game() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+}
+game();
